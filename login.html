@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ILLUMINATION Login and Registration Form</title>
+    <link rel="stylesheet" href="css/login.css">
+</head>
+
+<body>
+    <div class="container img">
+        <div class="form-box">
+            <div class="button-box">
+                <div id="btn"></div>
+                <button type="button" class="toggle-btn" onclick="Login()">Log In</button>
+                <button type="button" class="toggle-btn" onclick="Register()">Register</button>
+            </div>
+            <form action="mainmenu.html" id="login" name="login" class="input-group" onsubmit="return validateForm()" >
+                <input type="text" class="input-field" placeholder="Email" name="uname" required>
+                <input type="password" class="input-field" placeholder="Enter Password" name="pwd" required>
+                <input type="checkbox" class="check-box"><span>Remember Password</span>
+                <button type="submit" class="submit-btn" >log In</button>
+                <!-- onclick="location.href='mainmenu.html'" -->
+            </form>
+
+            <form action="mainmenu.html" id="register" name="register" class="input-group" onsubmit="return validateForm2()">
+                <input type="text" class="input-field" placeholder="User Name" name="uname2" required>
+                <input type="text" class="input-field" placeholder="Email Id" name="email" required>
+                <input type="password" class="input-field" placeholder="Enter Password" name="pwd2" required>
+                <input type="checkbox" class="check-box"><span>I agree to the terms and conditions</span>
+                <button type="submit" class="submit-btn" >Register Me</button>
+            </form>
+        </div>
+
+    </div>
+
+    <script>
+        var x = document.getElementById("login");
+        var y = document.getElementById("register");
+        var z = document.getElementById("btn");
+
+        function Login() {
+            x.style.left = "40px";
+            y.style.left = "450px";
+            z.style.left = "0";
+        }
+        function Register() {
+            x.style.left = "-400px";
+            y.style.left = "40px";
+            z.style.left = "110px";
+        }
+        
+    </script>
+
+<!-- // ##################### Validation ##########################
+
+        function RegisterMe(){
+            var uname = document.register.uname.value;
+            var email = document.register.email.value;
+            var pwd = document.register.pwd.value;
+
+            if (uname_validation("talha")) {
+                if (email_validation("123@gmail.com")) {
+                    if (pwd_validation("123")) {
+                    }
+                }
+            }
+            return false;
+            
+        }
+
+        function uname_validation(uname) {
+            var letters = /^[A-Za-z]+$/;
+            if (uname.value.match(letters)) {
+                return true;
+            }
+            else {
+                alert('Username must have alphabet characters only');
+                uname.focus();
+                return false;
+            }
+        }
+
+        function email_validation(email) {
+            var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+            if (email.value.match(mailformat)) {
+                return true;
+            }
+            else {
+                alert("You have entered an invalid email address!");
+                email.focus();
+                return false;
+            }
+        }
+        function pwd_validation(pwd) {
+            var passid_len = pwd.value.length;
+            if (passid_len == 0 || passid_len >= my || passid_len < mx) {
+                alert("Password should not be empty / length be between " + mx + " to " + my);
+                pwd.focus();
+                return false;
+            }
+            return true;
+        }
+
+
+    </script> --> -->
+  
+</body>
+
+<script src="js/login.js"></script>
+</html>

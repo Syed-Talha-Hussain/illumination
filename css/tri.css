@@ -1,0 +1,67 @@
+/* ==========================================
+   FINAL.CSS
+   These are the final styles for the project.
+
+   Course:  CSS3 in 30 Days
+   Author:  Brad Hussey
+   Website: codecollege.ca
+   ========================================== */
+.final__triangle {
+  position: relative;
+  height: 660px;
+  clip-path: polygon(50% 0%, 10% 100%, 90% 100%);
+  
+}
+
+.final__triangle div {
+  position: absolute;
+  top: 0;
+  line-height: 120px;
+  font-size: 0.8em;
+  text-align: center;
+  background: red;
+  width: 100%;
+  height: 100px;
+  margin: 0 auto;
+  transition: all ease 0.6s;
+  color: red;
+  /* z-index: 0; */
+}
+
+.final__triangle .create {
+  /* z-index: -1; */
+}
+
+  .final__triangle:hover div {
+    color: black;
+  }
+
+.final__triangle:hover .evaluate {
+  top: 110px;
+  background: green;
+}
+
+.final__triangle:hover .analyze {
+  top: 220px;
+  background: blue;
+}
+
+.final__triangle:hover .apply {
+  top: 330px;
+  background: yellow;
+}
+
+.final__triangle:hover .understand {
+  top: 440px;
+  background: orange;
+}
+
+.final__triangle:hover .remember {
+  top: 550px;
+  background: purple;
+ 
+}
+
+.evaluate:hover, .analyze:hover, .apply:hover, .understand:hover, .remember:hover{
+    font-size: 24px;
+}
